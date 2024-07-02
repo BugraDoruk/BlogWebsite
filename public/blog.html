@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/10.12.2/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/10.12.2/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/10.12.2/firebase-performance-compat.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "PM2nU5y6cX_rJvfnD",
+      });
+   })();
+</script>
+  <!-- 
+    initialize the SDK after all desired features are loaded, set useEmulator to false
+    to avoid connecting the SDK to running emulators.
+  -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+  crossorigin="anonymous" />
+
+ 
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Blog</a>
+        <div class="navbar-nav">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="blog.html">Blog</a>
+          <a href="index.html#about">Hakkında</a>
+          <a href="index.html#contact">İletişim</a>
+          <a href="login2.html">Gönderi</a>
+          <a onclick="googleLogin()" id="login-button" style="cursor: pointer;">Giriş Yap </a>
+        </div>
+      </div>
+    </nav>
+   
+  </header>
+  <!-- end of header -->
+
+  <!-- design -->
+
+  <!-- end of design -->
+
+
+  <!-- blog -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="title">
+        <h2>Son Blog Yazıları</h2>
+        <p>Kodlama Üzerine Blog Yazılarım</p>
+      </div>
+      <div class="blog-content">
+        <!-- item -->
+        <div class="blog-item" style="display: flex; flex-direction: column;">
+
+          <div class="blog-img">
+            <img src="images/1.jpg" alt=""id="1" style="display: block; ">
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="blog-text" >
+            <span>26 Mayıs 2024</span>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil!
+              Quaerat.</p>
+            <a href="#" class="more-button">Daha Fazlasını Oku</a>
+          </div>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class="blog-item">
+          <div class="blog-img">
+            <img src="images/2.jpeg" alt="" id="2">
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="blog-text">
+            <span>22 Mayıs 2024</span>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil!
+              Quaerat.</p>
+            <a href="#" class="more-button">Daha Fazlasını Oku</a>
+          </div>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class="blog-item">
+          <div class="blog-img">
+            <img src="images/3.webp" alt="" id="3">
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="blog-text" >
+            <span>18 Mayıs 2024</span>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil!
+              Quaerat.</p>
+            <a href="#" class="more-button">Daha Fazlasını Oku</a>
+          </div>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class="blog-item">
+          <div class="blog-img">
+            <img src="images/4.jpg" alt="" id="4">
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="blog-text" >
+            <span>15 Mayıs 2024</span>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil!
+              Quaerat.</p>
+            <a href="#" class="more-button">Daha Fazlasını Oku</a>
+          </div>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class="blog-item">
+          <div class="blog-img">
+            <img src="images/5.jpeg" alt="" id="5">
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="blog-text" >
+            <span>10 Mayıs 2024</span>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil!
+              Quaerat.</p>
+            <a href="#" class="more-button">Daha Fazlasını Oku</a>
+          </div>
+        </div>
+        <!-- end of item -->
+        <!-- item -->
+        <div class="blog-item">
+          <div class="blog-img">
+            <img src="images/6.png" alt="" style="width: 100%; aspect-ratio: 16/9;" id="6">
+            <span><i class="far fa-heart"></i></span>
+          </div>
+          <div class="blog-text" >
+            <span>10 Mayıs 2024</span>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil!
+              Quaerat.</p>
+            <a href="#" class="more-button">Daha Fazlasını Oku</a>
+          </div>
+        </div>
+        <!-- end of item -->
+
+
+      </div>
+    </div>
+
+  </section>
+
+  </div>
+  <!-- end of blog -->
+
+  <!-- about -->
+ 
+  <!-- end of about -->
+  
+  
+  <!-- footer -->
+  <footer>
+    <div class="social-links">
+
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+
+    </div>
+    <span>Doruk Buğra Öztürk Blog</span>
+  </footer>
+  <!-- end of footer -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
